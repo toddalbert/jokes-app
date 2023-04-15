@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
   jokeText: {
     color: 'whitesmoke',
     textAlign: 'center',
+    width: '90%',
     fontSize: 48,
   },
   touchToReveal: {

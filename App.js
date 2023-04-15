@@ -7,14 +7,14 @@ import { shuffle } from './src/utils';
 export default function App() {
   const [jokes, setJokes] = useState();
   const [i, setI] = useState(0);
-  const [reveal, setReveal] = useState(false);
+  const [reveal, setReveal] = useState(false); // 2
   const getJokes = async () => {
     const resp = await fetch('https://api.sampleapis.com/jokes/goodJokes');
     const json = await resp.json();
     setJokes(shuffle(json));
   }
   useEffect(() => { getJokes(); }, []);
-  useEffect(() => { setReveal(false); }, [i]);
+  useEffect(() => { setReveal(false); }, [i]); // 2
   const getNextJoke = () => {
     if(i < jokes.length - 1) setI(i + 1)
     else setI(0)
