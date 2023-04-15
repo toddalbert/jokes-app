@@ -44,7 +44,8 @@ export const styles = StyleSheet.create({
   },
   show: {
     backgroundColor: 'transparent',
-    width: '100%',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     height: 88,
     padding: 16,
   },
